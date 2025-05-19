@@ -1,0 +1,330 @@
+/* 基本樣式 */
+body {
+    margin: 0;
+    font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #fff; /* 頁面預設背景色 */
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* 頁首 Header */
+.site-header {
+    background-color: #c6e0ed; /* 根據圖片的淺灰色背景 */
+    padding: 15px 0;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.site-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo */
+.logo a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.6em; /* 調整Logo字體大小 */
+    font-weight: bold;
+}
+
+/* 主要導覽列 Main Navigation */
+.main-navigation ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* 桌面版水平排列 */
+}
+
+.main-navigation ul li {
+    margin-left: 20px; /* 導覽項目間距 */
+}
+
+.main-navigation ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1em;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.main-navigation ul li a:hover,
+.main-navigation ul li a.active { /* 可為當前頁面添加 active class */
+    background-color: #3c4679;
+    color: #fff;
+}
+
+/* Menu Toggle Button (手機版 Menu 按鈕) */
+.menu-toggle {
+    display: none; /* 預設隱藏，手機版顯示 */
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+/* 主要內容 Main */
+main {
+    padding: 30px 0;
+}
+
+main h1 {
+    margin-bottom: 20px;
+}
+
+/* 頁尾 Footer */
+/* Footer 區塊整體樣式 */
+footer {
+    background-color: #c6e0ed;
+    /* 淺藍色背景，根據圖片調整 */
+    color: #333;
+    /* 深灰色文字 */
+    padding: 30px 20px;
+    /* 上下內距，左右內距 */
+    font-family: sans-serif;
+    /* 設定字體 */
+}
+
+/* 限制 footer 內容的最大寬度並置中 */
+.footer-container {
+    max-width: 1200px;
+    /* 最大寬度 */
+    margin: 0 auto;
+    /* 置中 */
+    display: flex;
+    /* 使用 Flexbox 佈局 */
+    flex-direction: column;
+    /* 讓 top 和 bottom 區塊垂直堆疊 */
+    gap: 20px;
+    /* top 和 bottom 區塊之間的間距 */
+}
+
+/* 主要內容區塊 (Logo + 連結欄位) */
+.footer-top {
+    display: flex;
+    /* 使用 Flexbox 佈局，讓左邊 Logo 和右邊連結欄位並排 */
+    flex-wrap: wrap;
+    /* 內容超出時換行 */
+    gap: 30px;
+    /* 左邊和右邊區塊之間的間距 */
+    align-items: flex-start;
+    /* 讓 Flex 項目靠頂部對齊 */
+}
+
+/* 左側 Logo 區塊 */
+.footer-left {
+    display: flex;
+    align-items: center;
+    /* 圖片和文字垂直置中對齊 */
+    gap: 10px;
+    /* 圖片和文字之間的間距 */
+    /* 根據需要設定左側區塊的寬度或 Flex 屬性 */
+    flex-shrink: 0;
+    /* 防止 Logo 區塊被壓縮 */
+}
+
+.footer-left img {
+    max-width: 100%;
+    /* 確保圖片響應式 */
+    height: auto;
+    /* 維持圖片比例 */
+}
+
+.footer-left span {
+    font-size: 1.2em;
+    /* Logo 旁的文字大小 */
+    font-weight: bold;
+}
+
+/* 右側連結欄位區塊 */
+.footer-links {
+    display: flex;
+    /* 使用 Flexbox 佈局，讓連結欄位並排 */
+    flex-wrap: wrap;
+    /* 連結欄位超出時換行 */
+    gap: 20px;
+    /* 連結欄位之間的間距 */
+    flex-grow: 1;
+    /* 允許連結欄位區塊佔據剩餘空間 */
+    justify-content: space-around;
+    /* 在連結欄位之間平均分配空間 */
+}
+
+.footer-col {
+    /* 根據需要為每個欄位設定最小寬度或 Flex 屬性 */
+    flex-basis: 150px;
+    /* 設定基礎寬度，內容多會超出 */
+    flex-grow: 1;
+    /* 允許欄位增長 */
+}
+
+.footer-col h4 {
+    font-size: 1em;
+    /* 欄位標題大小 */
+    margin-bottom: 15px;
+    /* 標題下方間距 */
+    color: #555;
+    /* 標題顏色 */
+}
+
+.footer-col ul {
+    list-style: none;
+    /* 移除列表符號 */
+    padding: 0;
+    /* 移除預設內距 */
+    margin: 0;
+    /* 移除預設外距 */
+}
+
+.footer-col ul li {
+    margin-bottom: 8px;
+    /* 列表項目間距 */
+}
+
+.footer-col a {
+    color: #333;
+    /* 連結文字顏色 */
+    text-decoration: none;
+    /* 移除連結下劃線 */
+    font-size: 0.95em;
+}
+
+.footer-col a:hover {
+    text-decoration: underline;
+    /* 鼠標懸停時顯示下劃線 */
+}
+
+.footer-col p {
+    font-size: 0.95em;
+    margin: 0 0 8px 0;
+    /* 段落間距 */
+    color: #555;
+}
+
+
+/* 底部版權資訊區塊 */
+.footer-bottom {
+    text-align: right;
+    /* 文字靠右對齊，根據圖片調整 */
+    font-size: 0.85em;
+    /* 字體小一點 */
+    color: #555;
+    /* 文字顏色 */
+    /* 因為 footer-container 是 Flex column，這部分會獨立一行並靠右對齊 */
+}
+
+/* --- Media Queries (RWD) --- */
+
+/* 手機版樣式 (768px 以下) */
+@media (max-width: 768px) {
+    .site-header .container {
+        flex-wrap: wrap; /* 允許換行 */
+    }
+
+    .logo {
+        width: 100%; /* Logo 佔滿整行 */
+        text-align: center; /* Logo 置中 */
+        margin-bottom: 10px; /* 與下方按鈕的間距 */
+    }
+     /* 為了讓 menu 按鈕在右上角，將 logo 和 menu-toggle 放在一個容器，或者調整 order */
+    .site-header .container {
+        position: relative; /* 為了 menu-toggle 的絕對定位 */
+    }
+    .logo {
+        width: auto; /* 取消佔滿整行，讓 menu 按鈕可以放到右邊 */
+        text-align: left; /* Logo靠左 */
+        margin-bottom: 0;
+    }
+
+    .menu-toggle {
+        display: block; /* 顯示 Menu 按鈕 */
+        /* 如果希望按鈕固定在右上角，即使logo文字很長 */
+        position: absolute;
+        top: 50%;
+        right: 15px; /* 配合 container 的 padding */
+        transform: translateY(-50%);
+    }
+
+    .main-navigation {
+        display: none; /* 預設隱藏 */
+        position: absolute; /* 絕對定位 */
+        top: 100%; /* 定位在 header 的下方 */
+        right: 15px; /* 與 menu-toggle 對齊右邊 */
+        background-color: #fff; /* 下拉選單背景色 */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* 陰影效果 */
+        z-index: 1000; /* 確保在其他內容之上 */
+        min-width: 180px; /* 設定下拉選單最小寬度 */
+        /* 移除 width: 100%; 和 order: 3; */
+        /* 移除 margin-top: 15px; */
+        border-radius: 4px;
+        overflow: hidden; /* 隱藏超出邊界的內容 */
+    }
+
+    .main-navigation.toggled {
+        display: block; /* 當 .toggled class 被加入時顯示選單 */
+    }
+
+    .main-navigation ul {
+        flex-direction: column; /* 選單項目垂直排列 */ /* 保留 */
+        /* align-items: center; /* 選單項目置中 */ /* 可以移除或保留，看需求 */
+        padding: 10px 0; /* 下拉選單內部上下邊距 */
+    }
+
+    .main-navigation ul li {
+        margin: 0; /* 移除垂直間距 */
+        /* width: 100%; */ /* 移除 */
+    }
+
+    /* 調整下拉選單中連結的樣式 */
+
+    .main-navigation ul li a {
+        display: block; /* 讓連結佔滿整個 li */
+        text-align: center;
+        padding: 12px 0;
+    }
+}
+
+/*footer RWD*/
+
+/* 響應式設計：在螢幕較小時調整佈局 */
+@media (max-width: 768px) {
+    .footer-top {
+        flex-direction: column;
+        /* 在小螢幕下堆疊 Logo 和連結區塊 */
+        gap: 20px;
+        /* 調整堆疊時的間距 */
+    }
+
+    .footer-left {
+        justify-content: center;
+        /* Logo 區塊在小螢幕下置中 (如果需要) */
+    }
+
+    .footer-links {
+        flex-direction: column;
+        /* 連結欄位在小螢幕下堆疊 */
+        gap: 20px;
+        /* 調整內部堆疊時的間距 */
+    }
+
+    .footer-col {
+        flex-basis: auto;
+        /* 堆疊時自動計算寬度 */
+    }
+
+    .footer-bottom {
+        text-align: center;
+        /* 版權資訊在小螢幕下置中 (如果需要) */
+    }
+}
