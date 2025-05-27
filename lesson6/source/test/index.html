@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JustHome</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="container header-container">
+            <a href="#" class="logo">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    style="margin-right: 8px;">
+                    <path d="M12 2L2 7V21H22V7L12 2ZM19 19H14V13H10V19H5V9L12 5L19 9V19Z" fill="white" />
+                </svg>
+                JustHome
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#">Home <span class="dropdown-arrow">▾</span></a></li>
+                    <li><a href="#">Listings <span class="dropdown-arrow">▾</span></a></li>
+                    <li><a href="#">Members <span class="dropdown-arrow">▾</span></a></li>
+                    <li><a href="#">Blog <span class="dropdown-arrow">▾</span></a></li>
+                    <li><a href="#">Pages <span class="dropdown-arrow">▾</span></a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a href="tel:+6868588666" class="phone-number">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24c1.12.37 2.33.57 3.57.57c.55 0 1 .45 1 1V20c0 .55-.45 1-1 1c-9.39 0-17-7.61-17-17c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1c0 1.25.2 2.45.57 3.57c.11.35.03.74-.25 1.02l-2.2 2.2z" />
+                    </svg>
+                    +886 685 88666
+                </a>
+                <a href="#" class="profile-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4s-4 1.79-4 4s1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
+                    </svg>
+                </a>
+                <a href="#" class="btn btn-outline">Add Property</a>
+            </div>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content container">
+            <p class="pre-headline">LET US GUIDE YOUR HOME</p>
+            <h1>Discover a place you'll<br>love to live</h1>
+            <div class="search-container">
+                <div class="search-tabs">
+                    <button class="tab-btn active" data-type="sale">Sale</button>
+                    <button class="tab-btn" data-type="rent">Rent</button>
+                </div>
+                <div class="search-bar">
+                    <input type="text" placeholder="Enter Name, Keywords...">
+                    <button class="search-btn" aria-label="Search">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="#6c5f4a"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5A6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5S14 7.01 14 9.5S11.99 14 9.5 14z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="homes-for-you">
+        <div class="container">
+            <h2>Homes For You</h2>
+            <p class="subtitle">Based on your view history</p>
+
+            <div class="carousel-container">
+                <button class="carousel-arrow prev" aria-label="Previous homes">❮</button>
+                <div class="carousel-wrapper">
+                    <div class="carousel-track">
+                        <!-- Property Card 1 -->
+                        <div class="property-card">
+                            <div class="card-image">
+                                <img src="https://via.placeholder.com/350x230/cccccc/808080?text=Kitchen+View"
+                                    alt="Skyper Pool Apartment">
+                                <div class="badges">
+                                    <span class="badge for-sale">FOR SALE</span>
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <h3>Skyper Pool Apartment</h3>
+                                <p class="price">$280,000</p>
+                                <p class="location">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+                                    </svg>
+                                    1020 Bloomingdale Ave
+                                </p>
+                                <div class="features">
+                                    <span><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M7 13H9V11H7V13ZM7 17H9V15H7V17ZM11 13H13V11H11V13ZM11 17H13V15H11V17ZM15 13H17V11H15V13ZM15 17H17V15H15V17ZM19 7H5C3.9 7 3 7.9 3 9V19C3 20.1 3.9 21 5 21H19C20.1 21 21 20.1 21 19V9C21 7.9 20.1 7 19 7ZM19 19H5V9H19V19ZM17 5H7V3H17V5Z" />
+                                        </svg> 4 Beds</span>
+                                    <span><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M21 11.01L3 11v10h18v-10.01zM21 3H3v6.01l18-.01V3zm-2 12H5V13h14v2z" />
+                                        </svg> 2 Baths</span> <!-- Simple bath icon placeholder -->
+                                    <span><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M21 6H3C2.45 6 2 6.45 2 7V17C2 17.55 2.45 18 3 18H21C21.55 18 22 17.55 22 17V7C22 6.45 21.55 6 21 6ZM20 16H4V8H20V16Z" />
+                                        </svg> 450 sqft</span> <!-- Simple area icon -->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Property Card 2 -->
+                        <div class="property-card">
+                            <div class="card-image">
+                                <img src="https://via.placeholder.com/350x230/ddeeff/607080?text=Outdoor+Patio"
+                                    alt="North Dillard Street">
+                                <div class="badges">
+                                    <span class="badge for-rent">FOR RENT</span>
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <h3>North Dillard Street</h3>
+                                <p class="price">$250<span>/month</span></p>
+                                <p class="location">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+                                    </svg>
+                                    4330 Bell Shoals Rd
+                                </p>
+                                <div class="features">
+                                    <span><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M7 13H9V11H7V13ZM7 17H9V15H7V17ZM11 13H13V11H11V13ZM11 17H13V15H11V17ZM15 13H17V11H15V13ZM15 17H17V15H15V17ZM19 7H5C3.9 7 3 7.9 3 9V19C3 20.1 3.9 21 5 21H19C20.1 21 21 20.1 21 19V9C21 7.9 20.1 7 19 7ZM19 19H5V9H19V19ZM17 5H7V3H17V5Z" />
+                                        </svg> 4 Beds</span>
+                                    <span><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M21 11.01L3 11v10h18v-10.01zM21 3H3v6.01l18-.01V3zm-2 12H5V13h14v2z" />
+                                        </svg> 2 Baths</span>
+                                    <span><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M21 6H3C2.45 6 2 6.45 2 7V17C2 17.55 2.45 18 3 18H21C21.55 18 22 17.55 22 17V7C22 6.45 21.55 6 21 6ZM20 16H4V8H20V16Z" />
+                                        </svg> 400 sqft</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Property Card 3 -->
+                        <div class="property-card">
+                            <div class="card-image">
+                                <img src="https://via.placeholder.com/350x230/eeddcc/807060?text=Living+Room"
+                                    alt="Eaton Garth Penthouse">
+                                <div class="badges">
+                                    <span class="badge for-sale">FOR SALE</span>
+                                    <span class="badge featured">FEATURED</span>
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <h3>Eaton Garth Penthouse</h3>
+                                <p class="price">$180,000</p>
+                                <p class="location">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+                                    </svg>
+                                    7722 18th Ave, Brooklyn
+                                </p>
+                                <div class="features">
+                                    <span><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M7 13H9V11H7V13ZM7 17H9V15H7V17ZM11 13H13V11H11V13ZM11 17H13V15H11V17ZM15 13H17V11H15V13ZM15 17H17V15H15V17ZM19 7H5C3.9 7 3 7.9 3 9V19C3 20.1 3.9 21 5 21H19C20.1 21 21 20.1 21 19V9C21 7.9 20.1 7 19 7ZM19 19H5V9H19V19ZM17 5H7V3H17V5Z" />
+                                        </svg> 4 Beds</span>
+                                    <span><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M21 11.01L3 11v10h18v-10.01zM21 3H3v6.01l18-.01V3zm-2 12H5V13h14v2z" />
+                                        </svg> 2 Baths</span>
+                                    <span><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M21 6H3C2.45 6 2 6.45 2 7V17C2 17.55 2.45 18 3 18H21C21.55 18 22 17.55 22 17V7C22 6.45 21.55 6 21 6ZM20 16H4V8H20V16Z" />
+                                        </svg> 450 sqft</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Add more cards if needed for carousel functionality -->
+                        <div class="property-card"> <!-- Card 4 (duplicate for sliding) -->
+                            <div class="card-image">
+                                <img src="https://via.placeholder.com/350x230/cccccc/808080?text=Another+Kitchen"
+                                    alt="Skyper Pool Apartment Clone">
+                                <div class="badges">
+                                    <span class="badge for-sale">FOR SALE</span>
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <h3>Skyper Pool Apartment II</h3>
+                                <p class="price">$290,000</p>
+                                <p class="location">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+                                    </svg>
+                                    1021 Bloomingdale Ave
+                                </p>
+                                <div class="features">
+                                    <span><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M7 13H9V11H7V13ZM7 17H9V15H7V17ZM11 13H13V11H11V13ZM11 17H13V15H11V17ZM15 13H17V11H15V13ZM15 17H17V15H15V17ZM19 7H5C3.9 7 3 7.9 3 9V19C3 20.1 3.9 21 5 21H19C20.1 21 21 20.1 21 19V9C21 7.9 20.1 7 19 7ZM19 19H5V9H19V19ZM17 5H7V3H17V5Z" />
+                                        </svg> 4 Beds</span>
+                                    <span><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M21 11.01L3 11v10h18v-10.01zM21 3H3v6.01l18-.01V3zm-2 12H5V13h14v2z" />
+                                        </svg> 2 Baths</span>
+                                    <span><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M21 6H3C2.45 6 2 6.45 2 7V17C2 17.55 2.45 18 3 18H21C21.55 18 22 17.55 22 17V7C22 6.45 21.55 6 21 6ZM20 16H4V8H20V16Z" />
+                                        </svg> 450 sqft</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-arrow next" aria-label="Next homes">❯</button>
+            </div>
+            <div class="carousel-dots">
+                <!-- Dots will be generated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
