@@ -10,9 +10,9 @@ def index():
 def classes():
     return render_template("classes.html.jinja2")
 
-@app.route("/news")
-def news():
-    return render_template("news.html.jinja2")
+@app.route("/new")
+def new():
+    return render_template("new.html.jinja2")
 
 @app.route("/traffic")
 def traffic():

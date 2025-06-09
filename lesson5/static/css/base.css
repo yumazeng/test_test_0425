@@ -16,7 +16,7 @@ body {
 
 /* 頁首 Header */
 .site-header {
-    background-color: #c6e0ed; /* 根據圖片的淺灰色背景 */
+    background-color: #AFD1E2; /* 根據圖片的淺灰色背景 */
     padding: 15px 0;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
@@ -84,144 +84,86 @@ main h1 {
 }
 
 /* 頁尾 Footer */
-/* Footer 區塊整體樣式 */
 footer {
-    background-color: #c6e0ed;
-    /* 淺藍色背景，根據圖片調整 */
-    color: #333;
-    /* 深灰色文字 */
-    padding: 30px 20px;
-    /* 上下內距，左右內距 */
-    font-family: sans-serif;
-    /* 設定字體 */
+    background-color: #AFD1E2; /* 根據圖片調整的淺藍色，您可以修改 */
+    color: #333; /* 文字顏色，根據圖片內容調整 */
+    padding: 30px 50px 10px 50px;
+    font-size: 14px;
 }
 
-/* 限制 footer 內容的最大寬度並置中 */
 .footer-container {
-    max-width: 1200px;
-    /* 最大寬度 */
-    margin: 0 auto;
-    /* 置中 */
     display: flex;
-    /* 使用 Flexbox 佈局 */
-    flex-direction: column;
-    /* 讓 top 和 bottom 區塊垂直堆疊 */
-    gap: 20px;
-    /* top 和 bottom 區塊之間的間距 */
-}
-
-/* 主要內容區塊 (Logo + 連結欄位) */
-.footer-top {
-    display: flex;
-    /* 使用 Flexbox 佈局，讓左邊 Logo 和右邊連結欄位並排 */
-    flex-wrap: wrap;
-    /* 內容超出時換行 */
-    gap: 30px;
-    /* 左邊和右邊區塊之間的間距 */
-    align-items: flex-start;
-    /* 讓 Flex 項目靠頂部對齊 */
-}
-
-/* 左側 Logo 區塊 */
-.footer-left {
-    display: flex;
-    align-items: center;
-    /* 圖片和文字垂直置中對齊 */
-    gap: 10px;
-    /* 圖片和文字之間的間距 */
-    /* 根據需要設定左側區塊的寬度或 Flex 屬性 */
-    flex-shrink: 0;
-    /* 防止 Logo 區塊被壓縮 */
+    justify-content: space-between; /* 讓左右兩部分分開 */
+    align-items: flex-start; /* 頂部對齊 */
+    max-width: 1200px; /* 限制最大寬度，使其居中 */
+    margin: 0 auto; /* 水平居中 */
+    gap: 20px; /* 各區域之間的間距 */
+    flex-wrap: wrap; /* 在小螢幕上換行 */
 }
 
 .footer-left img {
-    max-width: 100%;
-    /* 確保圖片響應式 */
-    height: auto;
-    /* 維持圖片比例 */
+    max-height: 50px; /* 限制 Logo 高度 */
+    display: block; /* 避免圖片下方多餘空間 */
 }
 
-.footer-left span {
-    font-size: 1.2em;
-    /* Logo 旁的文字大小 */
+.footer-links {
+    display: flex;
+    gap: 30px; /* 每個連結區塊之間的間距 */
+    flex-wrap: wrap; /* 在小螢幕上換行 */
+}
+
+.footer-column {
+    min-width: 150px; /* 每個連結區塊的最小寬度 */
+}
+
+.footer-column h4 {
+    margin-top: 10px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: #000; /* 標題顏色，根據圖片調整 */
     font-weight: bold;
 }
 
-/* 右側連結欄位區塊 */
-.footer-links {
-    display: flex;
-    /* 使用 Flexbox 佈局，讓連結欄位並排 */
-    flex-wrap: wrap;
-    /* 連結欄位超出時換行 */
-    gap: 20px;
-    /* 連結欄位之間的間距 */
-    flex-grow: 1;
-    /* 允許連結欄位區塊佔據剩餘空間 */
-    justify-content: space-around;
-    /* 在連結欄位之間平均分配空間 */
-}
-
-.footer-col {
-    /* 根據需要為每個欄位設定最小寬度或 Flex 屬性 */
-    flex-basis: 150px;
-    /* 設定基礎寬度，內容多會超出 */
-    flex-grow: 1;
-    /* 允許欄位增長 */
-}
-
-.footer-col h4 {
-    font-size: 1em;
-    /* 欄位標題大小 */
-    margin-bottom: 15px;
-    /* 標題下方間距 */
-    color: #555;
-    /* 標題顏色 */
-}
-
-.footer-col ul {
+.footer-column ul {
     list-style: none;
-    /* 移除列表符號 */
     padding: 0;
-    /* 移除預設內距 */
     margin: 0;
-    /* 移除預設外距 */
 }
 
-.footer-col ul li {
+.footer-column ul li {
     margin-bottom: 8px;
-    /* 列表項目間距 */
 }
 
-.footer-col a {
-    color: #333;
-    /* 連結文字顏色 */
+.footer-column ul li a {
     text-decoration: none;
-    /* 移除連結下劃線 */
-    font-size: 0.95em;
+    color: #333; /* 連結文字顏色 */
+    transition: color 0.3s ease;
 }
 
-.footer-col a:hover {
-    text-decoration: underline;
-    /* 鼠標懸停時顯示下劃線 */
+.footer-column ul li a:hover {
+    color: #007BFF; /* 連結滑鼠懸停顏色 */
 }
 
-.footer-col p {
-    font-size: 0.95em;
-    margin: 0 0 8px 0;
-    /* 段落間距 */
-    color: #555;
+.footer-column p {
+    margin: 0;
+    line-height: 1.6;
 }
 
+.app-buttons img {
+    max-height: 40px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
 
-/* 底部版權資訊區塊 */
 .footer-bottom {
-    text-align: right;
-    /* 文字靠右對齊，根據圖片調整 */
-    font-size: 0.85em;
-    /* 字體小一點 */
-    color: #555;
-    /* 文字顏色 */
-    /* 因為 footer-container 是 Flex column，這部分會獨立一行並靠右對齊 */
+    text-align: right; /* 根據圖片，版權信息在右邊 */
+    padding-top: 20px;
+    margin-top: 20px;
+    border-top: 1px solid #A9A9A9; /* 分隔線顏色 */
+    font-size: 12px;
+    max-width: 1200px;
+    margin-left: auto; /* 與 footer-container 一樣右對齊 */
+    margin-right: auto; /* 與 footer-container 一樣居中 */
 }
 
 /* --- Media Queries (RWD) --- */
@@ -296,35 +238,52 @@ footer {
 }
 
 /*footer RWD*/
-
-/* 響應式設計：在螢幕較小時調整佈局 */
-@media (max-width: 768px) {
-    .footer-top {
-        flex-direction: column;
-        /* 在小螢幕下堆疊 Logo 和連結區塊 */
-        gap: 20px;
-        /* 調整堆疊時的間距 */
+/* 響應式設計：在較小螢幕上的調整 */
+@media (max-width: 992px) {
+    .footer-container {
+        flex-direction: column; /* Logo 和連結區塊垂直排列 */
+        align-items: center; /* 居中對齊 */
+        text-align: center; /* 內容居中 */
     }
 
     .footer-left {
-        justify-content: center;
-        /* Logo 區塊在小螢幕下置中 (如果需要) */
+        margin-bottom: 20px;
     }
 
     .footer-links {
-        flex-direction: column;
-        /* 連結欄位在小螢幕下堆疊 */
-        gap: 20px;
-        /* 調整內部堆疊時的間距 */
+        justify-content: center; /* 連結區塊水平居中 */
+        width: 100%;
     }
 
-    .footer-col {
-        flex-basis: auto;
-        /* 堆疊時自動計算寬度 */
+    .footer-column {
+        margin-bottom: 0px;
+        min-width: auto; /* 取消最小寬度限制 */
+        width: 100%; /* 讓每個區塊佔滿寬度 */
+        text-align: center; /* 每個區塊內的文字也居中 */
+    }
+
+    .footer-column h4 {
+        text-align: center;
+    }
+
+    .app-buttons {
+        display: flex;
+        justify-content: center;
     }
 
     .footer-bottom {
-        text-align: center;
-        /* 版權資訊在小螢幕下置中 (如果需要) */
+        text-align: center; /* 版權信息也居中 */
+    }
+}
+
+@media (max-width: 576px) {
+    .footer-links {
+        flex-direction: column; /* 在非常小的螢幕上，連結區塊也垂直排列 */
+        align-items: center;
+    }
+
+    .footer-column {
+        margin-bottom: 0px;
+        line-height: 0px;
     }
 }
