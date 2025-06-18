@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+{% block title %}測試模型{% endblock %}
+
+{% block link %}
+{{ super() }}
+<style>
+    .result-box {
+        margin-top: 20px;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        background: #fff;
+    }
+
+    .result-box h2,
+    .result-box h3 {
+        border-bottom: 1px solid #eee;
+        padding-bottom: 10px;
+        margin-bottom: 15px;
+    }
+
+    .metrics-table {
+        width: 100%;
+    }
+
+    .metrics-table th {
+        width: 50%;
+        text-align: left;
+        padding: 8px;
+        background-color: #f8f9fa;
+    }
+
+    .metrics-table td {
+        padding: 8px;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<h1>測試已儲存的模型</h1>
+<p>請上傳一個新的 CSV 檔案進行測試。</p>
+<form method="post" enctype="multipart/form-data">
+    <input type="file" name="file" required>
+    <br><br>
+    <button type="submit" style="padding: 10px 20px; font-size: 16px;">開始測試</button>
+</form>
+
+{% if result %}
+<div class="result-box">
+    <h2>測試結果 - 評估指標</h2>
+    <table class="metrics-table">
+        <tbody>
+            <tr>
+                <th>平均絕對誤差 (MAE)</th>
+                <td>{{ result.mae }}</td>
+            </tr>
+            <tr>
+                <th>均方誤差 (MSE)</th>
+                <td>{{ result.mse }}</td>
+            </tr>
+            <tr>
+                <th>均方根誤差 (RMSE)</th>
+                <td>{{ result.rmse }}</td>
+            </tr>
+            <tr>
+                <th>決定係數 (R²)</th>
+                <td>{{ result.r2 }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="result-box">
+    <h2>測試結果 - 視覺化分析</h2>
+
+    <h3>趨勢擬合圖</h3>
+    <p>這張圖顯示了模型的預測趨勢（紅線）與實際市場走勢（藍線）的貼合程度。</p>
+    <img src="data:image/png;base64,{{ result.plots.plot1 }}" alt="預測 vs 真實價格圖" style="max-width: 100%;">
+
+    <hr style="margin: 30px 0;">
+
+    <h3>殘差分析圖</h3>
+    <p>理想情況下，殘差點應該隨機分佈在 y=0 的紅線上下，沒有明顯的模式或形狀。</p>
+    <img src="data:image/png;base64,{{ result.plots.plot2 }}" alt="殘差圖" style="max-width: 100%;">
+</div>
+{% endif %}
+{% endblock %}
